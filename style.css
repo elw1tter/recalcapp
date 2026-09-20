@@ -1,0 +1,152 @@
+/* ---------------------------------------------------------
+   Shared styles for all pages.
+   Change anything here and it updates across the whole site.
+   --------------------------------------------------------- */
+
+:root {
+  --ink: #1a1a1a;
+  --ink-soft: #55555f;
+  --rule: #e2e2e0;
+  --bg: #fbfbf9;
+  --accent: #1f4b5e;
+  --measure: 680px;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  padding: 0 24px;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.wrap {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 64px 0 96px;
+}
+
+/* ---------- Header / navigation ---------- */
+
+header {
+  padding-bottom: 28px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.name {
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--ink);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 18px;
+}
+
+nav a {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 15px;
+  color: var(--ink-soft);
+  text-decoration: none;
+  margin-right: 22px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+}
+
+nav a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+nav a.current { color: var(--ink); border-bottom-color: var(--ink); }
+
+/* ---------- Typography ---------- */
+
+h1 {
+  font-size: 34px;
+  line-height: 1.25;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.standfirst {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 17px;
+  color: var(--ink-soft);
+  margin: 0 0 40px;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 48px 0 12px;
+}
+
+h3 {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  font-weight: 600;
+  margin: 40px 0 10px;
+}
+
+p { margin: 0 0 20px; }
+
+a { color: var(--accent); }
+
+ul { padding-left: 20px; margin: 0 0 20px; }
+li { margin-bottom: 8px; }
+
+/* ---------- Home page section links ---------- */
+
+.sections { margin-top: 48px; }
+
+.card {
+  display: block;
+  padding: 22px 0;
+  border-top: 1px solid var(--rule);
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:last-of-type { border-bottom: 1px solid var(--rule); }
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.card:hover .card-title { color: var(--accent); }
+
+.card-note {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 16px;
+  color: var(--ink-soft);
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  margin-top: 72px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 15px;
+  color: var(--ink-soft);
+}
+
+/* ---------- Small screens ---------- */
+
+@media (max-width: 600px) {
+  body { font-size: 17px; }
+  .wrap { padding: 40px 0 64px; }
+  h1 { font-size: 28px; }
+  nav a { margin-right: 16px; }
+}

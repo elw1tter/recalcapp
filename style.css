@@ -150,3 +150,11 @@ footer {
   h1 { font-size: 28px; }
   nav a { margin-right: 16px; }
 }
+
+.headshot {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 0 24px;
+}
